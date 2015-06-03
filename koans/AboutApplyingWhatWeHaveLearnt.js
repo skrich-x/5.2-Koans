@@ -37,11 +37,17 @@ describe("About Applying What We Have Learnt", function() {
 
   it("given I'm allergic to nuts and hate mushrooms, it should find a pizza I can eat (functional)", function () {
 
-      var productsICanEat = [];
 
-      /* solve using filter() & all() / any() */
+      // var productsICanEat = [];
+      //
+      // productsIcanEat = _.filter(products, function(items){
+      //   var noNuts = !containsNuts;
+      //   var noMushroom =
+      //   _.every(product.ingredients, function(ingredient) {return ingredients !== "mushrooms"});
+      //   productsIcanEat.push(products[i]);
+      //
 
-      expect(productsICanEat.length).toBe(FILL_ME_IN);
+      expect(productsICanEat.length).toBe(1);
   });
 
   /*********************************************************************************/
@@ -62,6 +68,14 @@ describe("About Applying What We Have Learnt", function() {
 
     var sum = 233168;    /* try chaining range() and reduce() */
 
+
+      _(_.range(1000)).chain()
+      .reduce(function(a,b) {
+      if (i % 3 === 0 || i % 5 === 0){
+        return (a + b);
+      }
+    });
+
     expect(233168).toBe(233168);
   });
 
@@ -81,11 +95,22 @@ describe("About Applying What We Have Learnt", function() {
   it("should count the ingredient occurrence (functional)", function () {
     var ingredientCount = { "{ingredient name}": 0 };
 
-    /* chain() together map(), flatten() and reduce() */
+  //   _.chain(products)
+  //   .map(function(food){
+  //     return food.ingredients;
+  //   })
+  //   .flatten()
+  //   .reduce(function (x,y){
+  //     if(x === 'mushrooms'){
+  //       return x += 1;
+  //     }
+  //     return ingredientCount(x);
+  //   },0);
+  //   console.log(ingredientCount['mushrooms']);
+  //
+     expect(ingredientCount['mushrooms']).toBe(2);
 
-    expect(ingredientCount['mushrooms']).toBe();
-  });
-
+   });
   /*********************************************************************************/
   /* UNCOMMENT FOR EXTRA CREDIT */
   /*
